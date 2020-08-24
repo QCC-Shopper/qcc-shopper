@@ -1,24 +1,29 @@
-import React from 'react'
+import React, {useState, useEffect} from 'react'
 
-export default class Students extends React.Component {
-    constructor() {
-        super()
-        this.state = {
-            students: []
-        }
-    }
+export default function Student() {
+    const [state, setState] = useState({
+        students: [],
+        loading: true
+    })
 
-    async componentDidMount() {
+    const getData = async() => {
         const res = await fetch('/api/students')
         const data = await res.json()
-        console.log(data)
+        const names = data.map((item, i) => <li key={i}>{item.name}</li>)
+        setState({
+            students: names
+        })
     }
 
-    render() {
-        return (
-            <ul>
-                {this.state.students}
-            </ul>
-        )
-    }
+    useEffect(()=> {
+        if (state.loading) {
+            getData()
+        }
+    })
+ 
+    return (
+        <ul>
+            {state.students}
+        </ul>
+    )
 }
