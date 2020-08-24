@@ -1,6 +1,6 @@
 import React, {useState, useEffect} from 'react'
 
-export default function Student() {
+export default function func() {
     const [state, setState] = useState({
         students: [],
         loading: true
