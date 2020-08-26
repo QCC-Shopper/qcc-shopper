@@ -1,4 +1,4 @@
-Const db = require('./db');
+const db = require('./db');
 const {Sequelize} = require('sequelize');
 
 const Items = db.define('cars', {
@@ -11,11 +11,11 @@ const Items = db.define('cars', {
         allowNULL:false,
     },
     description: {
-        type: Sequelize.STRING,
+        type: Sequelize.STRING(500),
         allowNull: false,
     },
     imageUrl:  {
-        type: Sequelize.STRING,
+        type: Sequelize.STRING(300),
         allowNULL: false,
     }
 })
