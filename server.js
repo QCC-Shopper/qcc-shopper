@@ -2,14 +2,21 @@ const express = require('express')
 const morgan = require('morgan')
 
 const app = express()
-const PORT = 4000
 
 app.use(morgan('dev'))
 app.use(express.json())
 app.use(express.urlencoded({extended: true}))
 
+const PORT = 4000
 app.listen(PORT, ()=> {
     console.log(`Server live on port: ${PORT}`)
+})
+
+app.use('/items', require('./routes/itemRoutes'))
+app.get('/items', async (req, res) => {
+    try {
+        res.redirect('/items')
+    } catch(er) {console.log(er)}
 })
 
 app.get('/api/students', (req, res) => {
