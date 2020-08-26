@@ -13,11 +13,6 @@ app.listen(PORT, ()=> {
 })
 
 app.use('/items', require('./routes/itemRoutes'))
-app.get('/items', async (req, res) => {
-    try {
-        res.redirect('/items')
-    } catch(er) {console.log(er)}
-})
 
 app.get('/api/students', (req, res) => {
     const students = [
