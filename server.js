@@ -10,7 +10,10 @@ app.use(express.urlencoded({extended: true}))
 
 app.listen(PORT, ()=> {
     console.log(`Server live on port: ${PORT}`)
-})
+});
+
+//importing userRouter and setting them to a root route of /user
+app.use("/user", require("./routes/userRouter"))
 
 app.get('/api/students', (req, res) => {
     const students = [
