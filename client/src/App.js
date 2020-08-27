@@ -1,28 +1,25 @@
-import React from 'react';
-import logo from './logo.svg';
-import Students from './Students'
-import './App.css';
+import React, {Component} from 'react';
+import Students from './Students';
+import NavBar from './NavBar';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <Students />
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+
+class App extends Component{
+  constructor(){
+    super();
+    this.state = {
+      item: []
+    }
+  }
+
+  
+  render(){
+  return(
+    <div className='container'>
+      <NavBar/>
     </div>
-  );
+  )
 }
+}
+
 
 export default App;
