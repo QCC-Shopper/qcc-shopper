@@ -48,7 +48,8 @@ class SingleUser extends Component {
                     <div class="main-container">
 
                         <ul className="orders">
-                            Your Orders
+                            Orders
+
                         <a href={"placeholder"}>
                                 <li>placeholder: user X order names</li>
                             </a>
