@@ -1,6 +1,6 @@
 const { Router }  = require('express')
 const {Orders, Items} = require('../models')
-const { Sequelize, Op } = require('sequelize')
+const { Sequelize } = require('sequelize')
 const router = new Router()
 
 // route for the order associated with a user
