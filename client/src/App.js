@@ -1,6 +1,7 @@
 import React from 'react';
 import logo from './logo.svg';
-import Students from './Students'
+// import AllUsers from './components/AllUsers'
+// import Routes from './Routes'
 import './App.css';
 
 function App() {
@@ -11,15 +12,8 @@ function App() {
         <p>
           Edit <code>src/App.js</code> and save to reload.
         </p>
-        <Students />
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
+        {/* <AllUsers />
+        <Routes /> */}
       </header>
     </div>
   );
