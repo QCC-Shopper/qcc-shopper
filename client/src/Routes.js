@@ -1,14 +1,13 @@
 import React from 'react'
 import {Route, Switch} from 'react-router-dom'
 // Single user imports Here
-// Ex: import User from './components/User
+import SingleUser from './components/SingleUser'
 
 class Routes extends React.Component {
-
     render() {
         return (
             <Switch>
-                {/* <Route path='/user' component={User}/> */}
+                <Route path='/user' component={SingleUser}/>
             </Switch>
         )
     }
