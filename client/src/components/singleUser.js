@@ -9,23 +9,23 @@ class SingleUser extends Component {
         }
     }
     async componentDidMount() {
-        const data = await fetch(`users/${this.state.user}`);
+        const data = await fetch(`user/${this.state.user}`);
         const userInfo = await data.json()
         this.setState({
             user: userInfo
         })
 
-        console.log(this.state.user.name)
+        console.log(this.state.user)
     }
 
     render() {
         const userState = this.state.user
         return (
-            <body>
+            <div>
                 <div id="singleUser" className="orderDetails">
-                    <div class="container1">
-                        <div class="shopper">
-                            <a href="homepage">
+                    <div className="container1">
+                        <div className="shopper">
+                            <a href="homepage placeholder">
                                 QCC-Shopper Logo
                             </a>
                             <a href="cartRoute">
@@ -41,11 +41,11 @@ class SingleUser extends Component {
                             <div className="hidden">
                                 <div className="name">Hi {userState.name}</div>
                                 <address className="address">{userState.address}</address>
-                                <textarea className="description">description placeholder</textarea>
+                                <div className="description">description placeholder</div>
                             </div>
                         </div>
                     </div>
-                    <div class="main-container">
+                    <div className="main-container">
 
                         <ul className="orders">
                             Orders
@@ -54,15 +54,15 @@ class SingleUser extends Component {
                                 <li>placeholder: user X order names</li>
                             </a>
                         </ul>
-                        <div class="right">
+                        <div className="right">
 
-                            <div class="personal">
+                            <div className="personal">
                                 Personal Information
                                 <div>Name: {userState.name}</div>
                                 <address>Address: {userState.address}</address>
-                                <textarea>description placeholder</textarea>
+                                <div>description placeholder</div>
                         </div>
-                            <div class="wallet">
+                            <div className="wallet">
                                 Wallet
                                 <div>Shipping Address</div>
                                 <address>{userState.address}</address>
@@ -71,11 +71,11 @@ class SingleUser extends Component {
                         </div>
                         </div>
                     </div>
-                    <div class="footer">
+                    <div className="footer">
                         footer?
                     </div>
                 </div>
-            </body>
+            </div>
         )
     }
 }

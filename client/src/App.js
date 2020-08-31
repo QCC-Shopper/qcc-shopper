@@ -1,7 +1,7 @@
 import React from 'react';
 import logo from './logo.svg';
-// import AllUsers from './components/AllUsers'
-// import Routes from './Routes'
+import AllUsers from './components/AllUsers'
+import Routes from './Routes'
 import './App.css';
 
 function App() {
@@ -12,8 +12,8 @@ function App() {
         <p>
           Edit <code>src/App.js</code> and save to reload.
         </p>
-        {/* <AllUsers />
-        <Routes /> */}
+        <AllUsers />
+        <Routes />
       </header>
     </div>
   );
