@@ -13,7 +13,7 @@ export default class AllUsers extends React.Component {
         try {
             const response = await fetch('/user')
             const data = await response.json()
-            const userLinks = data.map((user, i) => <Link key={i} to={{pathname:'/test', query:{id: user.id.toString()}}}>{user.name}</Link>)                                      
+            const userLinks = data.map((user, i) => <Link key={i} to={{pathname:'/user', query:{id: user.id.toString()}}}>{user.name}</Link>)                                      
             this.setState({
                 users: userLinks
             })
