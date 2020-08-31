@@ -1,7 +1,6 @@
 import React from 'react';
 import logo from './logo.svg';
 import AllUsers from './components/AllUsers'
-import SingleUser from "./components/SingleUser"
 import Routes from './Routes'
 import './App.css';
 
