@@ -1,6 +1,7 @@
 import React from 'react';
 import logo from './logo.svg';
-import Students from './Students'
+import AllUsers from './components/AllUsers'
+import Routes from './Routes'
 import './App.css';
 
 import Items from "./Components/AllItems";
@@ -13,6 +14,7 @@ function App() {
         <p>
           Edit <code>src/App.js</code> and save to reload.
         </p>
+<<<<<<< HEAD
         <Items />
         <a
           className="App-link"
@@ -22,6 +24,10 @@ function App() {
         >
           Learn React
         </a>
+=======
+        <AllUsers />
+        <Routes />
+>>>>>>> fbe8345cab4e1f438b958f851c252644ab759dce
       </header>
     </div>
   );
