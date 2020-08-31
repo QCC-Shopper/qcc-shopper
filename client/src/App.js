@@ -3,6 +3,8 @@ import logo from './logo.svg';
 import Students from './Students'
 import './App.css';
 
+import Items from "./Components/AllItems";
+
 function App() {
   return (
     <div className="App">
@@ -11,7 +13,7 @@ function App() {
         <p>
           Edit <code>src/App.js</code> and save to reload.
         </p>
-        <Students />
+        <Items />
         <a
           className="App-link"
           href="https://reactjs.org"
