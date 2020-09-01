@@ -9,7 +9,7 @@ export default class AllItems extends React.Component {
         }
     }
 }
-
+/*
 async componentDidMount () {
     try {
         const response = await fetch('/items')
@@ -20,7 +20,7 @@ async componentDidMount () {
         })
     }  catch(er) {console.log(er)}
 }
-
+*/
 class AllItems extends Component {
     render() {
         return (
