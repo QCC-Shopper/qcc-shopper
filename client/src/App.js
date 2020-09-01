@@ -3,8 +3,8 @@ import logo from './logo.svg';
 import AllUsers from './components/AllUsers'
 import Routes from './Routes'
 import './App.css';
-
-import Items from "./Components/AllItems";
+//import AllItems from './Components/AllItems';
+// import Items from "./Components/Items";
 
 function App() {
   return (
@@ -14,8 +14,8 @@ function App() {
         <p>
           Edit <code>src/App.js</code> and save to reload.
         </p>
-<<<<<<< HEAD
-        <Items />
+        {/* <Items /> */}
+        {/* <AllItems /> */}
         <a
           className="App-link"
           href="https://reactjs.org"
@@ -24,10 +24,8 @@ function App() {
         >
           Learn React
         </a>
-=======
         <AllUsers />
         <Routes />
->>>>>>> fbe8345cab4e1f438b958f851c252644ab759dce
       </header>
     </div>
   );
