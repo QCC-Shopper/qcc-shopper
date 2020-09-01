@@ -1,7 +1,7 @@
 import React from 'react'
 import {Route, Switch} from 'react-router-dom'
 // Single user imports Here
-import SingleUser from './components/SingleUser'
+import SingleUser from './components/SingleUser.js'
 
 class Routes extends React.Component {
     render() {
@@ -13,4 +13,4 @@ class Routes extends React.Component {
     }
 }
 
-export default Routes
+export default Routes;
