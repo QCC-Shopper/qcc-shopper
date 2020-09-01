@@ -10,6 +10,7 @@ export default class AllItems extends React.Component {
     }
 }
 /*
+
 async componentDidMount () {
     try {
         const response = await fetch('/items')
