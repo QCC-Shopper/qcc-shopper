@@ -18,4 +18,14 @@ userRouter.get("/:id", async (req, res, next)=>{
         res.send(singleUser)
     }catch(err){next(err)}
 })
+userRouter.post("/", async (req, res, next)=>{
+    try {
+        const newUser = await req.body
+        console.log(newUser)
+        res.send(newUser)
+    } catch (error) {
+        next(error)
+    }
+
+})
  module.exports = userRouter
