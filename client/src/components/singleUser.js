@@ -79,4 +79,4 @@ class SingleUser extends Component {
         )
     }
 }
-export default SingleUser
+export default SingleUser;
