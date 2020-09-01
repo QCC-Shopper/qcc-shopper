@@ -18,7 +18,6 @@ router.post('/add', async(req, res, next) => {
     try {
         const response = await Orders.findAll({where: {userId: req.body.userId}})
         const result = await response
-        console.log(result)
         if (result.length > 0) {
             await Orders.update({
                 items: Sequelize.fn('array_append', Sequelize.col('items'), req.body.itemId),
