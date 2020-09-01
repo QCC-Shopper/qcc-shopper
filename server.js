@@ -7,10 +7,17 @@ app.use(morgan('dev'))
 app.use(express.json())
 app.use(express.urlencoded({extended: true}))
 
-const PORT = 4000
-app.listen(PORT, ()=> {
-    console.log(`Server live on port: ${PORT}`)
-});
+const models = require('./models')
+
+const init = async() => {
+    await models.db.sync()
+    console.log('All models synced succesfully')
+    app.listen(4000, ()=> {
+        console.log(`Server live on port: 4000`)
+    });
+}
+
+init()
 
 //importing userRouter and setting them to a root route of /user
 app.use("/user", require("./routes/userRouter"))
