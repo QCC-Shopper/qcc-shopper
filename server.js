@@ -21,5 +21,6 @@ init()
 
 //importing userRouter and setting them to a root route of /user
 app.use("/user", require("./routes/userRouter"))
-
 app.use('/items', require('./routes/itemRoutes'))
+app.use('/order', require('./routes/orderRoutes'))
+
