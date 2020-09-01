@@ -20,13 +20,13 @@ class NavBar extends Component{
     
                 <div className='btn-navbar'>
                     <Link to='/cars'>
-                        <button type="button">Browse Cars</button>
+                        Browse Cars
                     </Link>
                     <Link to='/cart'>
-                        <button type="button">Cart</button>
+                        Cart
                     </Link>
                     <Link to='/login'>
-                        <button type="button">Sign In</button>
+                        Sign In
                     </Link>
                 </div>
             </div>
