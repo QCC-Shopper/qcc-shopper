@@ -4,7 +4,7 @@ class NavBar extends Component{
     constructor(props){
         super(props);
         this.state = {
-            
+
         }
     }
 
@@ -19,13 +19,13 @@ class NavBar extends Component{
                 </form>
     
                 <div className='btn-navbar'>
-                    <Link to='./user'>
+                    <Link to='/user'>
                         <button type="button">Browse Cars</button>
                     </Link>
-                    <Link to='./cart'>
+                    <Link to='/cart'>
                         <button type="button">Cart</button>
                     </Link>
-                    <Link to='./login'>
+                    <Link to='/login'>
                         <button type="button">Sign In</button>
                     </Link>
                 </div>
