@@ -26,7 +26,7 @@ class SingleUser extends Component {
                     <div className="container1">
                         <div className="shopper">
                             <a href="homepage placeholder">
-                                QCC-Shopper Logo
+                                placeholder: QCC-Shopper Logo Here
                             </a>
                             <a href="cartRoute">
                                 <img src="https://cdn.iconscout.com/icon/free/png-256/shopping-bag-1683006-1440921.png" width="50" height="50" />
