@@ -20,7 +20,7 @@ userRouter.get("/:id", async (req, res, next)=>{
     }catch(err){next(err)}
 })
 
-router.post('/login', async(req, res, next) => {
+userRouter.post('/login', async(req, res, next) => {
     try {
         const {name, password} = req.body
         const user = await Users.findAll({where: {name: username}})
