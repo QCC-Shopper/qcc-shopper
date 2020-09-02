@@ -7,7 +7,7 @@ import NavBar from './components/NavBar.js'
 // AllUsers imports here
 import AllUsers from './components/AllUsers.js'
 // AllItems imports here
-import AllItems from './components/AllItems.js'
+// import AllItems from './components/AllItems.js'
 
 class Routes extends React.Component {
     render() {
@@ -16,7 +16,7 @@ class Routes extends React.Component {
                 <Route path='/user' component={SingleUser}/>
                 <Route path='/NavBar' component={NavBar}/>
                 <Route path='/AllUsers' component={AllUsers}/>
-                <Route path='/AllItems' component={AllItems}/>
+                {/* <Route path='/AllItems' component={AllItems}/> */}
             </Switch>
         )
     }

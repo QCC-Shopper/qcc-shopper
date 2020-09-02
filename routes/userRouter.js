@@ -20,7 +20,7 @@ userRouter.get("/:id", async (req, res, next)=>{
     }catch(err){next(err)}
 })
 
-router.post('/login', async(req, res, next) => {
+userRouter.post('/login', async(req, res, next) => {
     try {
         const {name, password} = req.body
         const user = await Users.findAll({where: {name: username}})
@@ -32,6 +32,21 @@ router.post('/login', async(req, res, next) => {
             res.send({result: 'password-incorrect'})
         }
     } catch(er) {next(er)}
+})
+
+userRouter.post("/", async (req, res, next)=>{
+    const {name, email, address, password} = await req.body
+    try {
+        const hashPassword = await bcrypt.hash(password, 10);
+    
+        await Users.create({name:name, email:email, address:address, password:hashPassword, })
+        console.log(hashPassword)
+        res.send(`${email} was created succesfully.`)
+    } catch (error) {
+        res.send(`${email} already exist`)
+        next(error )
+    }
+
 })
 
 module.exports = userRouter
