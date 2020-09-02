@@ -2,7 +2,7 @@
 // link to database goes here
 const Sequelize = require('sequelize')
 const db = new Sequelize(
-    'postgres://aidanfarhi:secret123@localhost:5432/qccshopper', 
+    'postgres://postgres:banana@localhost:5432/shopperdb', 
     {logging: false},
 )
 module.exports = db
