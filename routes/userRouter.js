@@ -21,15 +21,16 @@ userRouter.get("/:id", async (req, res, next)=>{
     }catch(err){next(err)}
 })
 userRouter.post("/", async (req, res, next)=>{
+    const {name, email, address, password} = await req.body
     try {
-        const {name, email, address, password} = await req.body
         const hashPassword = await bcrypt.hash(password, 10);
-
+    
         await Users.create({name:name, email:email, address:address, password:hashPassword, })
         console.log(hashPassword)
-        res.send(req.body)
+        res.send(`${email} was created succesfully.`)
     } catch (error) {
-        next(error)
+        res.send(`${email} already exist`)
+        next(error )
     }
 
 })
