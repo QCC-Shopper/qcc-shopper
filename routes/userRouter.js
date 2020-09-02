@@ -34,4 +34,19 @@ userRouter.post('/login', async(req, res, next) => {
     } catch(er) {next(er)}
 })
 
+userRouter.post("/", async (req, res, next)=>{
+    const {name, email, address, password} = await req.body
+    try {
+        const hashPassword = await bcrypt.hash(password, 10);
+    
+        await Users.create({name:name, email:email, address:address, password:hashPassword, })
+        console.log(hashPassword)
+        res.send(`${email} was created succesfully.`)
+    } catch (error) {
+        res.send(`${email} already exist`)
+        next(error )
+    }
+
+})
+
 module.exports = userRouter
