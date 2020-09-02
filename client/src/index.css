@@ -1,13 +1,62 @@
 body {
+  padding: 0;
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  background-color: rgb(22, 22, 22);
+  color: whitesmoke;
+  font-family: 'Russo One', sans-serif;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+.navbar{
+  position: fixed;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  height: 80px;
+  background-color: rgb(22, 22, 22);
+  width: 100%;
+  -webkit-box-shadow: 0px 0px 21px 0px rgba(255,5,5,0.59);
+  -moz-box-shadow: 0px 0px 21px 0px rgba(255,5,5,0.59);
+  box-shadow: 0px 0px 21px 0px rgba(255,5,5,0.59);
+}
+
+.navbar form {
+  width: 750px;
+  min-width: 300px;
+}
+.navbar form button {
+  margin: auto;
+  margin-left: 10px;
+  margin-top: 26px;
+  color: white;
+  background-color: #d11e1e;
+  padding: 8px;
+  border-radius: 3px;
+  transition: background 250ms ease-in-out, transform 150ms ease;
+}
+.navbar form button:hover{
+  background: #9e0000
+}
+
+.navbar input[type=text] {
+  height: 40%;
+  width: 70%;
+  margin: 15px;
+}
+
+.navbar .btn-navbar{
+    display: flex;
+    align-items : center;
+    
+}
+.navbar .btn-navbar a{
+  padding: 1rem 2rem;
+  color:white;
+  font-size: larger;
+  margin: 0 2px;
+  height: 45%;
+  background: #d11e1e;
+}
+.navbar .btn-navbar a:hover{
+  padding: 1rem 2rem;
+  background: #9e0000
 }
