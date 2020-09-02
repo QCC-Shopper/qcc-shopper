@@ -1,6 +1,8 @@
 const express = require("express");
 const userRouter = express();
-const Users = require("../models/user")
+const Users = require("../models/user");
+const db = require("../models/db");
+const bcrypt = require("bcrypt")
 
 userRouter.get("/", async (req, res, next)=>{
     try{
@@ -20,9 +22,12 @@ userRouter.get("/:id", async (req, res, next)=>{
 })
 userRouter.post("/", async (req, res, next)=>{
     try {
-        const newUser = await req.body
-        console.log(newUser)
-        res.send(newUser)
+        const {name, email, address, password} = await req.body
+        const hashPassword = await bcrypt.hash(password, 10);
+
+        await Users.create({name:name, email:email, address:address, password:hashPassword, })
+        console.log(hashPassword)
+        res.send(req.body)
     } catch (error) {
         next(error)
     }
