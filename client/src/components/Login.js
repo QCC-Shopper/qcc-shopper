@@ -2,8 +2,8 @@ import React, { useState } from 'react'
 import '../cmp-styles/Login.css'
 
 export default function Login() {
-    const [username, setUsername] = useState('')
-    const [password, setPassword] = useState('')
+    const [username, setUsername] = useState({username: ''})
+    const [password, setPassword] = useState({password: ''})
 
     const handleUsername = (event) => {
         setUsername({
@@ -35,8 +35,8 @@ export default function Login() {
             <div id='login-form'>
                 <form onSubmit={handleSubmit}>
                     <h1>Welcome</h1>
-                    <input type='text' name='username' placeholder='Username' value={username} onChange={handleUsername} required/>
-                    <input type='password' name='password' placeholder='Password' value={password} onChange={handlePassword} required/>
+                    <input type='text' name='username' placeholder='Username' value={username.username} onChange={handleUsername} required/>
+                    <input type='password' name='password' placeholder='Password' value={password.password} onChange={handlePassword} required/>
                     <button type='submit'>Login</button>   
                 </form>
             </div>
