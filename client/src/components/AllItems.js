@@ -1,11 +1,7 @@
 import React from 'react';
 import {Link} from 'react-router-dom';
 
-const {items} = [
-    {name: '', price: 'a', description: 'a1', picture:'$ a.aa '},
-    {id: 3, make: 'b', model: 'b1', price:'$b.bb ' },
-    {id: 2, make: 'c', model: 'c1', price:'$ c.cc' }
-]; 
+
 
 class AllItems extends React.Component {
     constructor(props) {
@@ -15,21 +11,23 @@ class AllItems extends React.Component {
         }
     };
 async componentDidMount() {
-
-            const response = await fetch('./items')
-            const data =await response.json()
-            const itemLinks = data.map((items, i)=> <li><Link key={i} to={{pathname:'/test', }}>(items.name)</Link></li>)
-   this.setState({
-       items: 'itemLinks'
-   }) 
+        const response = await fetch('./items');
+        const data = await response.json();
+        this.setState({
+            items: data,
+        }) 
 }
+//const itemLinks = data.v)
 render() {
     return (
-         <ul>
-         {this.state.items} item show up!
-         {console.log(this.state.items)}
-        </ul>
+        <div className='car-images-container'>
+            {this.state.items.map((item, i)=> <div className="car-images">
+                <img src={item.imageUrl}></img>
+                    <p><Link key={i} to={{pathname:'/test'}}>{item.name}</Link></p>
+                    <p>Price: {item.price}</p>
+            </div>)}
+        </div>
         );
      }
 }
-export default AllItems
+ export default AllItems;
