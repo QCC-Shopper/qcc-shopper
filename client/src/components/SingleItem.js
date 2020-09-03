@@ -46,3 +46,4 @@ export default function SingleItem(props) {
     )
 }
 
+export default SingleItem;

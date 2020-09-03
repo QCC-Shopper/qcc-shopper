@@ -33,7 +33,7 @@ class AddUser extends Component {
 
     render() {
         return (
-            <form onSubmit={this.handleSubmit} className="container">
+            <form onSubmit={this.handleSubmit} className="sign_up-container">
                 <div className="child_container1">
                     <text>
                         <p className="welcome-msg">

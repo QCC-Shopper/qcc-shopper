@@ -1,6 +1,6 @@
-
 const express = require('express')
 const morgan = require('morgan')
+
 
 const app = express()
 
@@ -9,6 +9,7 @@ app.use(express.json())
 app.use(express.urlencoded({extended: true}))
 
 const models = require('./models')
+
 
 const init = async() => {
     await models.db.sync()
@@ -24,3 +25,4 @@ init()
 app.use("/user", require("./routes/userRouter"))
 app.use('/items', require('./routes/itemRoutes'))
 app.use('/order', require('./routes/orderRoutes'))
+
