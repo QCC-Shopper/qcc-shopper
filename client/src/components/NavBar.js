@@ -22,8 +22,10 @@ class NavBar extends Component{
                     <Link to='/login'>{/*This link takes user to the login page where the user can connect to out community*/}
                         Sign In
                     </Link>
+                    <Link to='/sign_up'>{/*This link takes user to the login page where the user can connect to out community*/}
+                        Sign Up
+                    </Link>
                 </div>
-
             </div>
         )
     }

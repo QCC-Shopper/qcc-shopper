@@ -21,8 +21,8 @@ class Routes extends React.Component {
                 <Route path='/user' component={SingleUser}/>
                 <Route path='/NavBar' component={NavBar}/>
                 <Route path='/AllUsers' component={AllUsers}/>
-                <Route path='/AllItems' component={AllItems}/>
-                <Route path='/AddUser' component={AddUser}/>
+                <Route path='/cars' component={AllItems}/>
+                <Route path='/sign_up' component={AddUser}/>
                 <Route path='/Login' component={Login}/>
                 <Route path='/SingleItem' component={SingleItem}/>
             </Switch>
