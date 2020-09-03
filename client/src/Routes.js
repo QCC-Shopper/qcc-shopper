@@ -10,7 +10,7 @@ import AllUsers from './components/AllUsers.js'
 import AllItems from './components/AllItems.js'
 import AddUser from './components/AddUser.js'
 import Login from './components/Login.js'
-import SingleItem from './components/Login.js'
+import SingleItem from './components/SingleItem.js'
 import SingleUser from './components/SingleUser.js'
 
 
@@ -30,4 +30,4 @@ class Routes extends React.Component {
     }
 }
 
-export default Routes
+export default Routes;
