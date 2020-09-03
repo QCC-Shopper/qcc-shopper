@@ -63,6 +63,112 @@ body {
   background: #9e0000
 }
 /*-----------------------------------Nav Bar style ends here-----------------------------------*/
+
+/* ................            .................sign up css below .............              ..................*/
+.sign_up-container{
+  background-color: rgb(61, 61, 90);
+  background-image: url(https://thumbor.forbes.com/thumbor/fit-in/1200x0/filters%3Aformat%28jpg%29/https%3A%2F%2Fspecials-images.forbesimg.com%2Fimageserve%2F5d35eacaf1176b0008974b54%2F0x0.jpg%3FcropX1%3D790%26cropX2%3D5350%26cropY1%3D784%26cropY2%3D3349);
+  height: 600px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  border: 2px solid red;
+}
+
+.child_container1{
+  margin-left: auto;
+}
+.child_container2{
+  height: 400px;
+  width: 200px;
+  margin: auto;
+  padding: 20px;
+  background-color: rgb(22, 22, 22);
+  opacity: 0.8;
+}
+.child_container2 p{
+  margin-right: auto;
+  margin-left: auto;
+}
+#form-control{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.form_input{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  margin-right: auto;
+  margin-left: auto;
+  height: 300px;
+}
+.submit{
+  margin-right: auto;
+  margin-left: auto;
+  opacity: 1;
+}
+.submit input{
+  background-color: red;
+  opacity: 1;
+  color: white;
+}
+label input{
+  color: white;
+}
+input{
+  opacity: 0.7;
+  background-color: rgb(70, 59, 59);
+}
+.welcome-msg{
+  font-size: xx-large;
+}
+.slogan{
+  float: right;
+}
+/* ..................................end of signup css ...................................*/
+
+
+
+
+/* ................                   ...............singleuser css ..................               ..........*/
+.user-x-container{
+  border: 2px solid gold;
+}
+.order-info{
+  border: 2px solid rgb(109, 42, 42);
+  margin: 10px;
+}
+.x-container1{
+  border: 2px solid blue;
+  display: flex;
+}
+.personalInfo{
+  display: flex;
+  flex-direction: row-reverse;
+}
+.shopper{
+  display: flex;
+  flex-direction: column;
+}
+.x-container2{
+  display: flex;
+  justify-content: space-around;
+}
+.right-container{
+  border: 2px solid green;
+  height: 600px;
+  justify-content: space-around;
+}
+.personal{
+  border: 2px solid yellow;
+}
+.wallet{
+  border: 2px solid pink;
+}
+/* ........................................singleuser css ends here................................... */
+
+
 .container hr{
   margin: 50px 0;
 }
@@ -90,4 +196,6 @@ body {
   box-shadow: 0px 0px 21px 0px rgba(255,5,5,0.59);
 }
 
+
 /*-----------------------------------Cars/Items style ends here-----------------------------------*/
+
