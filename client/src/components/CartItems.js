@@ -1,4 +1,4 @@
-// Filler data for cart.js
+// Filler data for cart item
 field_1_count FILLER char,
 field_1 varray count(field_1_count)
 (
