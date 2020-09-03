@@ -15,12 +15,10 @@ class Cart extends React.Component {
             <div className='cart-container'>
                 
                 <div >
-                {this.state.items}  
-                .Logo {
-                  background-image: url(https://i0.kym-cdn.com/photos/images/facebook/001/315/909/a9f.jpg);
-                }
-                "Don't look!"
-                </div>)
+                {this.state.items}  No! Don't look!
+                
+                
+                </div>
             </div>
         )
                 
