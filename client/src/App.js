@@ -8,8 +8,11 @@ import AllItems from './components/AllItems';
 
 function App() {
   return (
-    <NavBar/>,
-    <AllItems/>
+    <div className="container">
+      <NavBar/>
+      <hr/>
+      <AllItems/>
+    </div>
   );
 }
 
