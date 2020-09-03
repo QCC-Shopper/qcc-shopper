@@ -62,6 +62,7 @@ body {
   padding: 1rem 2rem;
   background: #9e0000
 }
+/*-----------------------------------Nav Bar style ends here-----------------------------------*/
 
 /* ................            .................sign up css below .............              ..................*/
 .sign_up-container{
@@ -166,7 +167,8 @@ input{
   border: 2px solid pink;
 }
 /* ........................................singleuser css ends here................................... */
-/*-----------------------------------Nav Bar style ends here-----------------------------------*/
+
+
 .container hr{
   margin: 50px 0;
 }
@@ -194,4 +196,6 @@ input{
   box-shadow: 0px 0px 21px 0px rgba(255,5,5,0.59);
 }
 
+
 /*-----------------------------------Cars/Items style ends here-----------------------------------*/
+
