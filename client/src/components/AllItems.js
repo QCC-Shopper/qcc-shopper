@@ -18,15 +18,15 @@ async componentDidMount() {
 
             const response = await fetch('./items')
             const data =await response.json()
-            const itemLinks = data.map((items, i)=> <li><Link key={i} to={{pathname:'/test', }}>(items.name)</Link></li>)
+            const itemLinks = data.map((items, i)=> <li><Link key={i} to={{pathname:'/test', }}>{items.name}</Link></li>)
    this.setState({
-       items: 'itemLinks'
+       items: itemLinks
    }) 
 }
 render() {
     return (
-         <ul>
-         {this.state.items} item show up!
+         <ul className="allcars-name-link">
+         {this.state.items}
          {console.log(this.state.items)}
         </ul>
         );

@@ -5,7 +5,7 @@ class SingleUser extends Component {
     constructor(props) {
         super(props);
         this.state = {
-            user: props.location.query.id
+            user: "1"
         }
     }
     async componentDidMount() {
@@ -21,9 +21,9 @@ class SingleUser extends Component {
     render() {
         const userState = this.state.user
         return (
-            <div>
-                <div id="singleUser" className="orderDetails">
-                    <div className="container1">
+            <div className="user-x-container">
+                <div className="order-info">
+                    <div className="x-container1">
                         <div className="shopper">
                             <a href="homepage placeholder">
                                 QCC-Shopper Logo
@@ -45,7 +45,7 @@ class SingleUser extends Component {
                             </div>
                         </div>
                     </div>
-                    <div className="main-container">
+                    <div className="x-container2">
 
                         <ul className="orders">
                             Orders
@@ -54,7 +54,7 @@ class SingleUser extends Component {
                                 <li>placeholder: user X order names</li>
                             </a>
                         </ul>
-                        <div className="right">
+                        <div className="right-container">
 
                             <div className="personal">
                                 Personal Information
