@@ -176,8 +176,11 @@ input{
 
 .car-images{
   margin: 10px;
+  
 }
-
+.car-images a{
+  color: red;
+}
 .car-images img {
   width: 400px;
   height: 350px;

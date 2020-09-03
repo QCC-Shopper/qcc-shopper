@@ -2,31 +2,28 @@ import React, {Component} from 'react';
 import {Link} from 'react-router-dom';
 
 class NavBar extends Component{
-    constructor(props){
-        super(props);
-        
-    }
-
-    //will modify to make search possible.
     render() {
         return(
             <div className='navbar'>
+                
                 <h1>LeetRide</h1>
-    
-                <form className='searh-form'>
+                <form className='searh-form'>{/*this part is where user can search for the products that are available on the ecomerce website*/}
                     <input type='text' placeholder='Find your ride'/>
                     <button type='submit'>Search</button>
                 </form>
                 
                 <div className='btn-navbar'>
-                    <Link to='/cars'>
+                    <Link to='/cars'>{/*This link takes user to the home page where all the cars are listed*/}
                         Browse Cars
                     </Link>
-                    <Link to='/cart'>
+                    <Link to='/cart'>{/*This link takes user to the cart component where all the cars that they selected and the price wil appear*/}
                         Cart
                     </Link>
-                    <Link to='/login'>
+                    <Link to='/login'>{/*This link takes user to the login page where the user can connect to out community*/}
                         Sign In
+                    </Link>
+                    <Link to='/sign_up'>{/*This link takes user to the login page where the user can connect to out community*/}
+                        Sign Up
                     </Link>
                 </div>
             </div>
