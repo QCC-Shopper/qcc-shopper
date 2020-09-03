@@ -12,6 +12,7 @@ function App() {
       <NavBar/>
       <hr/>
       <AllItems/>
+      <Routes />
     </div>
   );
 }

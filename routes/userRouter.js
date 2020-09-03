@@ -23,7 +23,7 @@ userRouter.get("/:id", async (req, res, next)=>{
 userRouter.post('/login', async(req, res, next) => {
     try {
         const {name, password} = req.body
-        const user = await Users.findAll({where: {name: username}})
+        const user = await Users.findAll({where: {name: name}})
         if (user.length === 0) res.send({result: 'username-not-found'})
         const check = await bcrypt.compare(password, user[0].password)
         if (check) {

@@ -8,12 +8,13 @@ app.use(morgan('dev'))
 app.use(express.json())
 app.use(express.urlencoded({extended: true}))
 
-const models = require('./models')
+// const models = require('./models')
 
 
 const init = async() => {
-    await models.db.sync()
-    console.log('All models synced succesfully')
+    console.log('nothing to sync')
+    // await models.db.sync()
+    // console.log('All models synced succesfully')
     app.listen(4000, ()=> {
         console.log(`Server live on port: 4000`)
     });

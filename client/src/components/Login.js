@@ -1,56 +1,46 @@
-import React from 'react'
+import React, { useState } from 'react'
+import '../cmp-styles/Login.css'
 
-export default class Login extends React.Component {
-    constructor(props) {
-        this.state = {
-            username: '',
-            password: '',
-            registering: false
-        }
-    }
+export default function Login() {
+    const [username, setUsername] = useState('')
+    const [password, setPassword] = useState('')
 
-    handleUsername = (event) => {
+    const handleUsername = (event) => {
         setUsername({
             username: event.target.value
         })
     }
-    handlePassword = (event) => {
+    const handlePassword = (event) => {
         setPassword({
             password: event.target.value
         })
     }
-    handleSubmit = async (event) => {
+    const handleSubmit = async (event) => {
         event.preventDefault()
         try {
             const response = await fetch('users/login', {
                 method: 'POST',
                 headers: {'Accept': 'application/json','Content-Type': 'application/json',},
-                body: JSON.stringify({name: name.username, password: password.password,})
+                body: JSON.stringify({name: username, password: password})
             })
             const login = await response.json()
             if (login.result === 'login-succesful') {
-                props.methods[0](login.user)
+                console.log('login succesful')
             }
         } catch(er) {console.log(er)}
     }
-    handleRegister = () => {
-        setRegister({
-            registering: !registering.registering
-        })
-    }
 
-    render() {
-        return (
-            <div id='login-form-div'>
-                <h1>Welcome</h1>
+    return (
+        <div id='login-form-div'>
+            <div id='login-form'>
                 <form onSubmit={handleSubmit}>
-                    <input type='text' name='username' placeholder='Username' value={username.username} onChange={handleUsername} required/>
-                    <input type='password' name='password' placeholder='Password' value={password.password} onChange={handlePassword} required/>
+                    <h1>Welcome</h1>
+                    <input type='text' name='username' placeholder='Username' value={username} onChange={handleUsername} required/>
+                    <input type='password' name='password' placeholder='Password' value={password} onChange={handlePassword} required/>
                     <button type='submit'>Login</button>   
                 </form>
-                <hr></hr>
             </div>
-        )
-    }
+        </div>
+    )
 
 }
