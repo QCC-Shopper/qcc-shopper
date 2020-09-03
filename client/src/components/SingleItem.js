@@ -45,5 +45,3 @@ export default function SingleItem(props) {
         </div>
     )
 }
-
-export default SingleItem;
