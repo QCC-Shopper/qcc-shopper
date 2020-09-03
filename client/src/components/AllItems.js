@@ -28,4 +28,6 @@ class AllItems extends React.Component {
                 
     }
 }
+
 export default AllItems;
+
