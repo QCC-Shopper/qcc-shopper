@@ -1,5 +1,8 @@
 import React from 'react';
 import {Link} from 'react-router-dom';
+
+
+
 class AllItems extends React.Component {
     constructor(props) {
         super(props)
@@ -14,7 +17,7 @@ async componentDidMount() {
             items: data,
         }) 
 }
-
+//const itemLinks = data.v)
 render() {
     return (
         <div className='car-images-container'>
