@@ -160,13 +160,13 @@ input{
 .wallet{
   border: 2px solid pink;
 }
-/* ........................................singleuser css ends here................................... */
+/*........................................singleuser css ends here................................... */
 
 
 .container hr{
   margin: 50px 0;
 }
-/* Cars/Items Style starts here */
+/*Cars/Items Style starts here */
 .car-images-container{
   display: flex;
   justify-content: center;

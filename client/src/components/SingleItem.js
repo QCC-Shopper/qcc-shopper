@@ -8,7 +8,7 @@ export default function SingleItem(props) {
     const addItem = async() => {
         console.log('item added')
         try {
-            const response = await fetch('order/add', {
+            const response = await fetch('/singleItem', {
                 method: 'POST',
                 headers: {'Accept': 'application/json','Content-Type': 'application/json',},
                 body: JSON.stringify({userId: localStorage.getItem('id'), itemId: state.carData.id})
@@ -21,8 +21,9 @@ export default function SingleItem(props) {
     useEffect(()=> {
         const getData = async() => {
             try {
+                console.log(props)
                 const response =  await fetch(`/items/${props.location.query.id}`)
-                const data = await response.json()
+                const data = await response.json()   
                 setState({
                     carData: data[0]
                 })
@@ -45,5 +46,3 @@ export default function SingleItem(props) {
         </div>
     )
 }
-
-export default SingleItem;
