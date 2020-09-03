@@ -12,7 +12,7 @@ import AddUser from './components/AddUser.js'
 import Login from './components/Login.js'
 import SingleItem from './components/Login.js'
 import SingleUser from './components/SingleUser.js'
-
+import Cart from './components/Cart.js'
 
 class Routes extends React.Component {
     render() {
@@ -25,6 +25,7 @@ class Routes extends React.Component {
                 <Route path='/sign_up' component={AddUser}/>
                 <Route path='/Login' component={Login}/>
                 <Route path='/SingleItem' component={SingleItem}/>
+                <Route path='/Cart' component={Cart}/>
             </Switch>
         )
     }
