@@ -11,7 +11,6 @@ function App() {
     <div className="container">
       <NavBar/>
       <hr/>
-      <AllItems/>
       <Routes />
     </div>
   );
